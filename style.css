@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    /* пастельный градиент */
+    background: linear-gradient(135deg, #a2d2ff, #b7e4c7, #fff4aa);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Контейнер для кругов */
+#bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.smart-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    will-change: transform;
+}
+/* --- СТИЛІ КОНТЕНТУ (СКЛЯНИЙ ЕФЕКТ) --- */
+.task-section {
+    position: relative; 
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px); /* Розмиття фону за блоком */
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1b5e20;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.title-block {
+    text-align: center;
+    border-bottom: 5px solid #3a5a40; 
+    margin-bottom: 40px;
+}
+
+.title-block h1 {
+    color: #1b5e20;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.title-block .topic {
+    font-size: 1.3rem;
+    color: #2d4c3e;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.student-info {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 15px;
+    font-size: 1.1rem;
+}
+
+.student-info b {
+    color: #1b5e20;
+}
+
+/* Таблиця тварин */
+.animal-table img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 25px; 
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 3px solid white;
+}
+
+.animal-table img:hover {
+    transform: scale(1.35) rotate(-3deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.animal-table tr:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.chess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.chess-table-final {
+    border-collapse: collapse;
+    border: 8px solid #3a5a40; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    background-color: white;
+    user-select: none; 
+}
+
+/* Ячейки шахмат */
+.chess-table-final td {
+    position: relative;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 45px;
+    cursor: pointer;
+}
+/* Стиль для порожньої клітинки, куди можна покласти фігуру */
+.chess-table-final td.drag-over {
+    background-color: rgba(165, 214, 167, 0.6) !important; 
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+}
+
+.coord {
+    font-size: 18px !important;
+    font-weight: 700;
+    color: #1b5e20;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    background: transparent !important;
+}
+.selected {
+    background-color: rgba(255, 255, 0, 0.3) !important;
+}
+
+/* Подсветка возможных ходов (Точки) */
+.possible-move::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование */
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    pointer-events: none; /* Чтобы точка не мешала клику */
+}
+
+/* Если в клетке враг, которого можно съесть */
+.possible-move:not(:empty)::after {
+    width: 74px;
+    height: 74px;
+    background-color: transparent;
+    border: 4px solid rgba(255, 0, 0, 0.3);
+}
+ /* Стиль для вікна перемоги */
+.victory-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 30px; 
+    animation: fadeIn 0.5s ease;
+}
+
+.victory-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #a5d6a7;
+}
+
+.victory-card h1 {
+    font-size: 2.5rem; 
+    margin: 0;
+    color: #1b5e20;
+}
+
+.victory-card button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #1b5e20;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.victory-card button:hover {
+    transform: scale(1.1);
+    background: #388e3c;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.chess-instructions {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    border-left: 5px solid #3a5a40;
+    text-align: left;
+}
+
+.chess-instructions h3 {
+    margin-top: 0;
+    color: #1b5e20;
+    font-size: 1.2rem;
+}
+
+.chess-instructions ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.chess-instructions li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #2d4c3e;
+    position: relative;
+}
+
+.chess-instructions li::before {
+    content: "•";
+    color: #3a5a40;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Стилі для Завдання 3 */
+.task3-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.task3-table {
+    border-collapse: collapse;
+    border: 3px solid #3a5a40; 
+    background-color: #ffcc80; 
+}
+
+.task3-table td {
+    width: 120px; 
+    height: 90px; 
+    text-align: center; 
+    vertical-align: middle;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Спеціальне налаштування для таблиць з різною кількістю стовпців */
+.task3-table td[colspan="2"] {
+    width: 240px;
+}
+.task3-table td[colspan="3"] {
+    width: 360px;
+}

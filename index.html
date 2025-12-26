@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Контрольна робота: Таблиці</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="bg-bubbles" id="bg-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="task-section title-block">
+    <h1>Контрольна робота з інформатики</h1>
+    <p class="topic">Тема: "Мультимедійні та гіпертекстові документи"</p>
+    <div class="student-info">
+        <p><b>Виконавець:</b>Бирледяну Дар'я</p>
+        <p><b>Дата:</b> 26.12.2025</p>
+    </div>
+    </div>
+
+    <div class="task-section" >
+        <h2>Завдання 1. Проєкт “Тваринний світ” </h2>
+        <table border="1" width="100%" cellpadding="10" class="animal-table">
+            <caption>Таблиця тварин </caption>
+            <tr bgcolor="#f2f2f2">
+                <th>№ </th>
+                <th>Назва </th>
+                <th>Опис </th>
+                <th>Фото </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Слон Африканський</td>
+                <td>Слони – гіганти серед тварин.   </td>
+                <td align="center"><img src="image/elephant.jpg" alt="Слон"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Лев</td>
+                <td>Король джунглів, символ сили та величі.</td>
+                <td align="center"><img src="image/lion.jpg" alt="Лев"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><b>Жираф</b></td>
+                <td>Найвища наземна тварина з довгою шиєю.</td>
+                <td align="center"><img src="image/giraffe.jpg" alt="Жираф"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><b>Зебра</b></td>
+                <td>Має унікальні чорно-білі смуги.</td>
+                <td align="center"><img src="image/zebra.jpg" alt="Зебра"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><b>Тигр</b></td>
+                <td>Найбільший представник родини котячих.</td>
+                <td align="center"><img src="image/tiger.jpg" alt="Тигр"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><b>Панда</b></td>
+                <td>Символ дикої природи, любить бамбук.</td>
+                <td align="center"><img src="image/panda.JPG" alt="Панда"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><b>Кенгуру</b></td>
+                <td>Тварина Австралії, що має сумку.</td>
+                <td align="center"><img src="image/kangaroo.jpg" alt="Кенгуру"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><b>Пінгвін</b></td>
+                <td>Нелітаючий птах холодних широт.</td>
+                <td align="center"><img src="image/pinguin.jpeg" alt="Пінгвін"></td>
+            </tr>
+        </table>
+    </div>
+
+   <div class="task-section" id="chess-block">
+    <h2>02. Інтерактивна шахівниця</h2>
+    <div class="chess-container">
+        <table class="chess-table-final" id="chessboard">
+            <tr>
+                <td class="coord"></td>
+                <td class="coord">1</td><td class="coord">2</td><td class="coord">3</td>
+                <td class="coord">4</td><td class="coord">5</td><td class="coord">6</td>
+                <td class="coord">7</td><td class="coord">8</td>
+            </tr>
+            <tr>
+                <td class="coord">A</td>
+                <td bgcolor="#CD853F">♜</td><td bgcolor="#F5DEB3">♞</td><td bgcolor="#CD853F">♝</td><td bgcolor="#F5DEB3">♛</td>
+                <td bgcolor="#CD853F">♚</td><td bgcolor="#F5DEB3">♝</td><td bgcolor="#CD853F">♞</td><td bgcolor="#F5DEB3">♜</td>
+            </tr>
+            <tr>
+                <td class="coord">B</td>
+                <td bgcolor="#F5DEB3">♟</td><td bgcolor="#CD853F">♟</td><td bgcolor="#F5DEB3">♟</td><td bgcolor="#CD853F">♟</td>
+                <td bgcolor="#F5DEB3">♟</td><td bgcolor="#CD853F">♟</td><td bgcolor="#F5DEB3">♟</td><td bgcolor="#CD853F">♟</td>
+            </tr>
+            <tr><td class="coord">C</td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td></tr>
+            <tr><td class="coord">D</td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td></tr>
+            <tr><td class="coord">E</td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td></tr>
+            <tr><td class="coord">F</td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td><td bgcolor="#F5DEB3"></td><td bgcolor="#CD853F"></td></tr>
+            <tr>
+                <td class="coord">G</td>
+                <td bgcolor="#CD853F">♙</td><td bgcolor="#F5DEB3">♙</td><td bgcolor="#CD853F">♙</td><td bgcolor="#F5DEB3">♙</td>
+                <td bgcolor="#CD853F">♙</td><td bgcolor="#F5DEB3">♙</td><td bgcolor="#CD853F">♙</td><td bgcolor="#F5DEB3">♙</td>
+            </tr>
+            <tr>
+                <td class="coord">H</td>
+                <td bgcolor="#F5DEB3">♖</td><td bgcolor="#CD853F">♘</td><td bgcolor="#F5DEB3">♗</td><td bgcolor="#CD853F">♕</td>
+                <td bgcolor="#F5DEB3">♔</td><td bgcolor="#CD853F">♗</td><td bgcolor="#F5DEB3">♘</td><td bgcolor="#CD853F">♖</td>
+            </tr>
+        </table>
+    </div>
+    <div class="chess-instructions">
+    <h3>🎮 Інструкція до інтерактивної дошки:</h3>
+    <ul>
+        <li><b>Вибір фігури:</b> Натисніть на будь-яку фігуру, щоб побачити можливі ходи (вони підсвітяться крапками).</li>
+        <li><b>Хід фігурою:</b> Після вибору фігури натисніть на підсвічену клітинку, щоб перемістити її туди.</li>
+        <li><b>Взяття фігури:</b> Ви можете "з’їсти" фігуру суперника — такі клітинки підсвічуються червоною рамкою.</li>
+        <li><b>Логіка перемоги:</b> Гра автоматично відстежує наявність Королів. Якщо один з них зникає з дошки — ви побачите сповіщення про перемогу прямо у цьому блоці!</li>
+    </ul>
+    <p class="hint"><i>*Порада: спробуйте з’їсти короля, щоб побачити фінальну анімацію.</i></p>
+</div>
+</div>
+
+<div class="task-section">
+    <h2>03. Спеціальне форматування (Завдання 3)</h2>
+    <div class="task3-container">
+
+        <table class="task3-table">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+
+        <table class="task3-table">
+            <tr>
+                <td colspan="3">1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+        <table class="task3-table">
+            <tr>
+                <td rowspan="2">1</td>
+                <td colspan="2">2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+        <table class="task3-table">
+            <tr>
+                <td colspan="1">1</td>
+                <td colspan="2">2</td>
+            </tr>
+            <tr>
+                <td colspan="2">3</td>
+                <td colspan="1">4</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
